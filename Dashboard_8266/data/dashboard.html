@@ -1,0 +1,127 @@
+<!doctype html>
+<html style="height:100%; width:100%">
+	<head>
+  </head>
+  <body>
+		<div >
+			<object id="svg_dashboard" type="image/svg+xml" data="dashboard.svg" onload="SVGImageLoaded()" style="width:100%;height:100%;position:fixed;top:0;left:0;bottom:0;right:0;">
+				Your browser does not support SVG
+			</object>
+		</div>
+  </body>
+
+  <script type="text/javascript">
+
+   // getRotationText function is called 10 times a second
+		var svglInterval = setInterval(function(){ getRotationText() }, 20); //times a second
+
+		var elem = document.getElementById("svg_dashboard");
+		if (elem.requestFullscreen) {
+		  elem.requestFullscreen();
+		} else if (elem.mozRequestFullScreen) { /* Firefox */
+		  elem.mozRequestFullScreen();
+		} else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+		  elem.webkitRequestFullscreen();
+		} else if (elem.msRequestFullscreen) { /* IE/Edge */
+		  elem.msRequestFullscreen();
+		}
+
+		function SVGImageLoaded(){
+			document.getElementById("svg_dashboard").getSVGDocument().getElementById("gaugesBackground").setAttribute('height', screen.height);
+			document.getElementById("svg_dashboard").getSVGDocument().getElementById("gaugesBackground").setAttribute('width', screen.width);
+		}
+
+		// displayDashboard function is called when the XMLHttpRequest() in getRotationText is called
+		function displayDashboard(rotationText) {
+			rotations = JSON.parse(rotationText);
+
+      speedElement = document.getElementById("svg_dashboard").getSVGDocument().getElementById("speedNeedle");
+			speedElement.setAttribute('transform',"rotate(" + rotations.speed + " 155,155)")
+			rpmElement = document.getElementById("svg_dashboard").getSVGDocument().getElementById("tachoNeedle");
+			rpmElement.setAttribute('transform',"rotate(" + rotations.rpm + " 155,155)");
+			fuelElement= document.getElementById("svg_dashboard").getSVGDocument().getElementById("fuelNeedle");
+			fuelElement.setAttribute('transform',"rotate(" + rotations.fuel + " 46,112)");
+			voltsElement= document.getElementById("svg_dashboard").getSVGDocument().getElementById("voltsNeedle");
+			voltsElement.setAttribute('transform',"rotate(" + rotations.volts + " 46,112)");
+			oilPressureElement= document.getElementById("svg_dashboard").getSVGDocument().getElementById("oilPressureNeedle");
+			oilPressureElement.setAttribute('transform',"rotate(" + rotations.pressure + " 46,112)");
+			oilTempElement= document.getElementById("svg_dashboard").getSVGDocument().getElementById("oilTempNeedle");
+			oilTempElement.setAttribute('transform',"rotate(" + rotations.temp + " 46,112)");
+			leftIndicatorElement= document.getElementById("svg_dashboard").getSVGDocument().getElementById("leftIndicator");
+			if (rotations.leftIndicator){
+				leftIndicatorElement.setAttribute('fill',"url(#greenOn)")
+			}
+			else
+			{
+				leftIndicatorElement.setAttribute('fill',"url(#warningOff)")
+			};
+			rightIndicatorElement= document.getElementById("svg_dashboard").getSVGDocument().getElementById("rightIndicator");
+			if (rotations.rightIndicator){
+		  	rightIndicatorElement.setAttribute('fill',"url(#greenOn)")
+			}
+			else
+			{
+				rightIndicatorElement.setAttribute('fill',"url(#warningOff)")
+			};
+			highBeamElement= document.getElementById("svg_dashboard").getSVGDocument().getElementById("highBeamWarning");
+			if (rotations.highBeamWarning){
+				highBeamElement.setAttribute('fill', "url(#blueOn)")
+			}
+			else {
+				highBeamElement.setAttribute('fill', "url(#warningOff)")
+			}
+			handbrakeElement= document.getElementById("svg_dashboard").getSVGDocument().getElementById("handBrakeWarning");
+			if(rotations.handBrakeWarning){
+				handbrakeElement.setAttribute('fill',"url(#redOn)");
+			}
+			else {
+				handbrakeElement.setAttribute('fill',"url(#warningOff)");
+			}
+			lowFuelElement= document.getElementById("svg_dashboard").getSVGDocument().getElementById("fuelWarning");
+			if(rotations.lowFuelWarning){
+				lowFuelElement.setAttribute('fill',"url(#yellowOn)");
+			}
+			else {
+				lowFuelElement.setAttribute('fill',"url(#warningOff)");
+			}
+
+			lowOilElement= document.getElementById("svg_dashboard").getSVGDocument().getElementById("lowOilWarning");
+			if(rotations.lowOilWarning){
+				lowOilElement.setAttribute('fill',"url(#redOn)");
+			}
+			else {
+				lowOilElement.setAttribute('fill',"url(#warningOff)");
+			}
+			lowBatteryElement= document.getElementById("svg_dashboard").getSVGDocument().getElementById("lowBatteryWarning");
+			if(rotations.lowBatteryWarning){
+				lowBatteryElement.setAttribute('fill',"url(#yellowOn)");
+			}
+			else {
+				lowBatteryElement.setAttribute('fill',"url(#warningOff)");
+			}
+			hotOilElement= document.getElementById("svg_dashboard").getSVGDocument().getElementById("hotOilWarning");
+			if(rotations.hotOilWarning){
+				hotOilElement.setAttribute('fill',"url(#redOn)");
+			}
+			else {
+				hotOilElement.setAttribute('fill',"url(#warningOff)");
+			}
+		}
+
+		// called 10 times a second
+		function getRotationText(){
+
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						displayDashboard(this.responseText);
+					}
+			};
+
+			xmlhttp.open("GET", "/data", true);
+			xmlhttp.send();
+
+		}
+  </script>
+
+</html>

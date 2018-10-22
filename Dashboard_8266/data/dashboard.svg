@@ -1,0 +1,333 @@
+
+<!DOCTYPE svg>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     preserveAspectRatio="none"
+     width="100%" height="100%" fill="#0f0f0f"
+     font-size="22px"
+     font-color="SILVER"
+>
+  <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Abel');
+        text {
+          font-size: 22px;
+          font-family: "Abel";
+          font-color="SILVER";
+        }
+  </style>
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="#0a0a0a"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="150%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(16,16,16);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(220,220,220);stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="150%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(16,16,16);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(120,120,120);stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="150%" y2="100%">
+      <stop offset="0%" style="stop-color:BLACK;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:SILVER;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="radGrad1" cx="30%" cy="30%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" style="stop-color:SILVER;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:BLACK;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="silverCircle" >
+      <stop offset="0%" style="stop-color:SILVER" />
+      <stop offset="40%" style="stop-color:#0000AA" />
+      <stop offset="100%" style="stop-color:#000066" />
+    </radialGradient>
+
+    <radialGradient id="warningOff">
+      <stop offset="30%" style="stop-color:#0A0A0A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#252525;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="greenOn">
+      <stop offset="30%" style="stop-color:DARKGREEN;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:LIMEGREEN;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="blueOn">
+      <stop offset="30%" style="stop-color:MEDIUMBLUE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:BLUE;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="redOn">
+      <stop offset="30%" style="stop-color:FIREBRICK;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:RED;stop-opacity:1" />
+    </radialGradient>
+
+    <radialGradient id="yellowOn">
+      <stop offset="30%" style="stop-color:GOLD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:YELLOW;stop-opacity:1" />
+    </radialGradient>
+
+    <filter id="fshadow" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+      <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+    </filter>
+
+    <g id="largeGauge" >
+      <!-- Outer Circles -->
+      <circle cx="155" cy="155" r="155" stroke="silver" stroke-width="1" fill="url(#grad2)"/>
+      <circle cx="155" cy="155" r="140" stroke="black" stroke-width="5" fill="none"/>
+      <circle cx="155" cy="155" r="133" stroke="DIMGREY" stroke-width="1" fill="none"/>
+
+      <!-- Inner Rings -->
+      <circle cx="155" cy="155" r="126" stroke="black" stroke-width="4" fill="none"/>
+      <circle cx="155" cy="155" r="122" stroke="DARKSEAGREEN" fill="none" stroke-width="1" />
+
+      <circle cx="155" cy="155" r="118" stroke="DARKSEAGREEN" fill="none" stroke-width="1" />
+      <circle cx="155" cy="155" r="114" stroke="DARKSEAGREEN" fill="none" stroke-width="1" />
+      <circle cx="155" cy="155" r="110" stroke="DARKSEAGREEN" fill="none" stroke-width="1" />
+      <circle cx="155" cy="155" r="106" stroke="DARKSEAGREEN" fill="none" stroke-width="1" />
+      <circle cx="155" cy="155" r="102" stroke="DARKSEAGREEN" fill="none" stroke-width="1" />
+      <circle cx="155" cy="155" r="98" stroke="DARKSEAGREEN" fill="none" stroke-width="1" />
+      <circle cx="155" cy="155" r="94" stroke="DARKSEAGREEN" fill="none" stroke-width="1" />
+      <circle cx="155" cy="155" r="90" stroke="DARKSEAGREEN" fill="none" stroke-width="1" />
+
+      <!-- Centre thicker rings-->
+      <circle cx="155" cy="155" r="69" stroke="DARKSEAGREEN" fill="none" stroke-width="8" />
+      <circle cx="155" cy="155" r="65" stroke="grey" fill="grey" stroke-width="1" />
+      <!--Marks for the speeds -->
+      <!-- Main speedo marks-->
+      <rect transform="rotate(-135 155,155)" x="152" y="70" width="4" height="8" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(-105 155,155)" x="152" y="70" width="4" height="8" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(-75 155,155)" x="152" y="70" width="4" height="8" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(-45 155,155)" x="152" y="70" width="4" height="8" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(-15 155,155)" x="152" y="70" width="4" height="8" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(15 155,155)" x="152" y="70" width="4" height="8" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(45 155,155)" x="152" y="70" width="4" height="8" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(75 155,155)" x="152" y="70" width="4" height="8" fill="DARKSEAGREEN"/>
+
+      <!-- Minor speedo marks-->
+      <rect transform="rotate(-120 155,155)" x="152" y="74" width="2" height="4" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(-90 155,155)" x="152" y="74" width="2" height="4" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(-60 155,155)" x="152" y="74" width="2" height="4" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(-30 155,155)" x="152" y="74" width="2" height="4" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(0 155,155)" x="152" y="74" width="2" height="4" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(30 155,155)" x="152" y="74" width="2" height="4" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(60 155,155)" x="152" y="74" width="2" height="4" fill="DARKSEAGREEN"/>
+    </g>
+
+    <g id="largeNeedle">
+        <polygon points="155,80 150,195 155,200 160,195 " style="fill:ivory;stroke:linen;stroke-width:1" />
+        <circle cx="155" cy="155" r="20" stroke-width="1" fill="url(#radGrad1)" />
+    </g>
+
+    <g id="smallGauge"> <!-- small gauge -->
+      <circle cx="46" cy="75" r="80" stroke="silver" stroke-width="1" fill="url(#grad2)"/>
+      <circle cx="46" cy="75" r="68" stroke="black" stroke-width="5" fill="none"/>
+      <circle cx="46" cy="75" r="65" stroke="DIMGREY" stroke-width="1" fill="none"/>
+
+      <text style="font-size: 14px"  text-anchor="middle" x="46" y="136" fill="SILVER" >mgt</text>
+     <!--Marks-->
+      <rect x="44" y="37" width="4" height="8" fill="SILVER"/>
+      <rect transform="rotate(45 46,112)" x="44" y="37" width="4" height="8" fill="SILVER"/>
+      <rect transform="rotate(-45 46,112)" x="44" y="37" width="4" height="8" fill="SILVER"/>
+      <rect transform="rotate(22.5 46,112)" x="45" y="37" width="2" height="8" fill="SILVER"/>
+      <rect transform="rotate(-22.5 46,112)" x="45" y="37" width="2" height="8" fill="SILVER"/>
+    </g> <!-- end of small gauge -->
+
+    <g id="smallNeedle" > <!-- needle -->
+      <polygon points="44,112 46,55 48,112" style="fill:Orangered;stroke:OrangeRed;stroke-width:1" />
+      <circle cx="46" cy="112" r="14" stroke="black" stroke-width="1" fill="url(#radGrad1)" />
+    </g>
+
+  </defs> <!-- end of defs-->
+
+ <!-- ********************************************************************************************   -->
+  <rect id="gaugesBackground" width="100%" height="100%" fill="#0A0A0A"/>
+
+  <!-- Main Gauges-->
+  <g id="mainGauges" transform="scale(1.3)">
+    <g id="speedo" transform="translate(77,65)">
+      <use xlink:href="#largeGauge"/>
+      <!--kph tags-->
+      <rect transform="rotate(105 155,155)" x="152" y="70" width="4" height="8" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(135 155,155)" x="152" y="70" width="4" height="8" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(90 155,155)" x="152" y="74" width="2" height="4" fill="DARKSEAGREEN"/>
+      <rect transform="rotate(120 155,155)" x="152" y="74" width="2" height="4" fill="DARKSEAGREEN"/>
+
+      <!-- kph labels-->
+      <text transform="rotate(-135 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="DARKSEAGREEN" >0</text>
+      <text transform="rotate(-105 155,155)" text-anchor="middle" x="155" y="58" fill="DARKSEAGREEN" filter="url(#solid)" >20</text>
+      <text transform="rotate(-75 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="DARKSEAGREEN" >40</text>
+      <text transform="rotate(-45 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="DARKSEAGREEN" >60</text>
+      <text transform="rotate(-15 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="DARKSEAGREEN" >80</text>
+      <text transform="rotate(15 155,155)" filter="url(#solid)" fill="DARKSEAGREEN" text-anchor="middle" x="155" y="58" >100</text>
+      <text transform="rotate(45 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="CRIMSON" >120</text>
+      <text transform="rotate(75 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="CRIMSON" >140</text>
+      <text transform="rotate(105 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="CRIMSON" >160</text>
+      <text transform="rotate(135 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="CRIMSON" >180</text>
+
+      <!-- odomoter -->
+    	<text style="font-size: 17px"  filter="url(#solid)" text-anchor="middle" x="150" y="200" fill="White" >0312196</text>
+      <text style="font-size: 17px"  filter="url(#solid)" text-anchor="middle" x="185" y="200" fill="Crimson" >7</text>
+      <text style="font-size: 17px"  text-anchor="middle" x="155" y="125" fill="BLACK" >KmPH</text>
+
+      <g id="speedNeedle"  transform="rotate(-135 155,155)">  <!-- Speedo Needle -->
+        <use xlink:href="#largeNeedle" />
+      </g>
+       <!--End of speedo centre-->
+    </g> <!-- end of speedo -->
+    <g id = "tachometer" transform="translate(390, 65)" >   <!--Tachometer-->
+        <use xlink:href="#largeGauge" />
+        <!--RPM Values-->
+        <text transform="rotate(-135 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="DARKSEAGREEN" >0</text>
+        <text transform="rotate(-105 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="DARKSEAGREEN" >1</text>
+        <text transform="rotate(-75 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="DARKSEAGREEN" >2</text>
+        <text transform="rotate(-45 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="DARKSEAGREEN" >3</text>
+        <text transform="rotate(-15 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="DARKSEAGREEN" >4</text>
+        <text transform="rotate(15 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="DARKSEAGREEN" >5</text>
+        <text transform="rotate(45 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="CRIMSON" >6</text>
+        <text transform="rotate(75 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="CRIMSON" >7</text>
+        <text transform="rotate(105 155,155)" filter="url(#solid)" text-anchor="middle" x="155" y="58" fill="CRIMSON" >8</text>
+        <text style="font-size: 17px"  text-anchor="middle" x="155" y="125" fill="BLACK" >RPM</text>
+        <text style="font-size: 17px" text-anchor="middle" x="155" y="200" fill="BLACK" >x 1000</text>
+        <circle cx="155" cy="155" r="20" stroke="black" stroke-width="1" fill="url(#radGrad1)" />
+        <!-- Tacho Needle -->
+        <g id= "tachoNeedle" transform="rotate(-135 155,155)">
+          <use xlink:href="#largeNeedle" />
+        </g>
+    </g> <!--End of Tachometer-->
+  </g> <!--  end of Main gauges-->
+
+  <!--Small Gauges-->
+  <g id="smallGauges" transform= "scale(1,1)">
+    <g id="fuelgauge" transform="translate(40,20) scale(1,1)">  <!-- fuel gauge -->
+      <use xlink:href="#smallGauge" />
+
+      <rect transform="rotate(-33.75 46,112)" x="45" y="41" width="2" height="4" fill="RED"/>
+      <rect transform="rotate(-45 46,112)" x="44" y="37" width="4" height="8" fill="RED"/>
+      <text style="font-size: 14px"  text-anchor="middle" x="46" y="30" fill="SILVER" >FUEL</text>
+      <text transform="rotate(45 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="SILVER" >F</text>
+      <text style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="SILVER" >1/2</text>
+      <text transform="rotate(-45 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="RED" >E</text>
+
+      <g id = "fuelNeedle" transform="rotate(-45 46,112)"> <!-- fuelNeedle -->
+        <use xlink:href="#smallNeedle" />
+      </g>
+    </g>  <!-- end of fuel gauge -->
+    <g id="oilPressureGauge" transform="translate(40,400)"><!-- oil pressure -->
+      <use xlink:href="#smallGauge"/>
+      <text style="font-size: 14px"  text-anchor="middle" x="46" y="30" fill="SILVER" >OIL</text>
+      <text style="font-size: 14px"  text-anchor="middle" x="46" y="90" fill="SILVER" >psi</text>
+      <text transform="rotate(-45 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="RED" >0</text>
+      <text transform="rotate(-22.5 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="RED" >20</text>
+      <text style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="SILVER" >40</text>
+      <text transform="rotate(22.5 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="SILVER" >60</text>
+      <text transform="rotate(45 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="SILVER" >80</text>
+
+      <rect transform="rotate(-22.5 46,112)" x="45" y="37" width="2" height="8" fill="RED"/>
+      <rect transform="rotate(-45 46,112)" x="44" y="37" width="4" height="8" fill="RED"/>
+
+      <g id="oilPressureNeedle" transform="rotate(-45 46,112)" > <!-- oilPressureNeedle -->
+        <use xlink:href="#smallNeedle"/>
+      </g>
+    </g>  <!-- end of oil pressure -->
+    <g id="voltsGauge" transform="translate(879,20)"> <!-- Volts -->
+      <use xlink:href="#smallGauge" />
+      <text style="font-size: 14px"  text-anchor="middle" x="46" y="30" fill="SILVER" >VOLTS</text>
+      <text transform="rotate(-45 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="RED" >8</text>
+      <text transform="rotate(-22.5 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="RED" >10</text>
+      <text style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="SILVER" >12</text>
+      <text transform="rotate(22.5 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="SILVER" >14</text>
+      <text transform="rotate(45 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="SILVER" >16</text>
+      <rect transform="rotate(-22.5 46,112)" x="45" y="37" width="2" height="8" fill="RED"/>
+      <rect transform="rotate(-45 46,112)" x="44" y="37" width="4" height="8" fill="RED"/>
+      <rect transform="rotate(-33.75 46,112)" x="45" y="41" width="2" height="4" fill="RED"/>
+
+      <g id="voltsNeedle" transform="rotate(-45 46,112)"> <!--voltsNeedle -->
+      <use xlink:href="#smallNeedle"/>
+      </g>
+    </g> <!--end of voltsGauge-->
+    <g id="oilTemperatureGauge" transform="translate(879, 400)"> <!-- oil temperature -->
+      <use xlink:href="#smallGauge"  />
+      <text style="font-size: 14px"  text-anchor="middle" x="46" y="30" fill="SILVER" >OIL</text>
+      <text style="font-size: 14px"  text-anchor="middle" x="46" y="90" fill="SILVER" >Deg C</text>
+
+      <text transform="rotate(-45 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="SILVER" >60</text>
+      <text transform="rotate(-22.5 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="SILVER" >85</text>
+      <text style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="SILVER" >110</text>
+      <text transform="rotate(22.5 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="SILVER" >135</text>
+      <text transform="rotate(45 46,112)" style="font-size: 12px"  text-anchor="middle" x="46" y="58" fill="RED" >160</text>
+
+      <rect transform="rotate(45 46,112)" x="44" y="37" width="4" height="8" fill="RED"/>
+      <rect transform="rotate(33.75 46,112)" x="44" y="37" width="2" height="4" fill="RED"/>
+
+      <g id="oilTempNeedle" transform="rotate(-45 46,112)" > <!--oilTempNeedle -->
+        <use xlink:href="#smallNeedle"/>
+      </g>
+    </g>  <!-- end of oil temperature -->
+  </g> <!--end of small gauges-->
+<!--
+  <line x1="0" y1="557" x2="1200" y2="557" style="stroke:rgb(255,0,0);stroke-width:1" />
+  <line x1="302" y1="0" x2="302" y2="600" style="stroke:rgb(255,0,0);stroke-width:1" />
+  <line x1="404" y1="0" x2="404" y2="600" style="stroke:rgb(255,0,0);stroke-width:1" />
+  <line x1="505" y1="0" x2="505" y2="600" style="stroke:rgb(255,0,0);stroke-width:1" />
+  <line x1="608" y1="0" x2="608" y2="600" style="stroke:rgb(255,0,0);stroke-width:1" />
+  <line x1="709" y1="0" x2="709" y2="600" style="stroke:rgb(255,0,0);stroke-width:1" />
+-->
+
+  <g id="otherIcons">
+    <g id="highBeamWarning" transform="translate(480,85) scale(.12)"  fill="url(#warningOff)">
+      <path d="M277.333,42.667H192c-105.875,0-192,86.135-192,192s86.125,192,192,192h85.333C300.854,426.667,320,407.531,320,384     V85.333C320,61.802,300.854,42.667,277.333,42.667z
+      M458.667,106.667H352c-5.896,0-10.667,4.771-10.667,10.667v21.333c0,5.896,4.771,10.667,10.667,10.667h106.667     c5.896,0,10.667-4.771,10.667-10.667v-21.333C469.333,111.437,464.563,106.667,458.667,106.667z
+      M458.667,213.333H352c-5.896,0-10.667,4.771-10.667,10.667v21.333c0,5.896,4.771,10.667,10.667,10.667h106.667     c5.896,0,10.667-4.771,10.667-10.667V224C469.333,218.104,464.563,213.333,458.667,213.333z
+      M458.667,320H352c-5.896,0-10.667,4.771-10.667,10.667V352c0,5.896,4.771,10.667,10.667,10.667h106.667     c5.896,0,10.667-4.771,10.667-10.667v-21.333C469.333,324.771,464.563,320,458.667,320z" />
+    </g>
+    <g id="turnSignals">  <!--Indicators-->
+      <!-- Left -->
+      <g id="leftIndicator"  transform="translate(180,15)"  fill="url(#warningOff)">
+        <path transform="scale(.135)" d="M448,149.333H277.333v-96c0-3.979-2.229-7.646-5.771-9.479c-1.533-0.78-3.213-1.186-4.889-1.188    c-2.172-0.002-4.339,0.665-6.173,1.958L4.5,225.958c-2.813,2-4.5,5.25-4.5,8.708s1.688,6.708,4.5,8.708l256,181.333    c1.833,1.292,4,1.958,6.167,1.958c1.667,0,3.354-0.396,4.896-1.188c3.542-1.833,5.771-5.5,5.771-9.479v-96H448    c11.771,0,21.333-9.563,21.333-21.333v-128C469.333,158.896,459.771,149.333,448,149.333z"/>
+      </g>
+      <!-- Right -->
+      <g id="rightIndicator" transform="translate(750,-20)"  fill="url(#warningOff)">
+        <path transform="translate(10,35) scale(.135)" d="M464.833,225.954l-256-181.333c-3.229-2.292-7.5-2.583-11.063-0.771c-3.542,1.833-5.771,5.5-5.771,9.479v96H21.333    C9.563,149.329,0,158.892,0,170.663v128c0,11.771,9.563,21.333,21.333,21.333H192v96c0,3.979,2.229,7.646,5.771,9.479    c1.542,0.792,3.229,1.188,4.896,1.188c2.167,0,4.333-0.667,6.167-1.958l256-181.333c2.813-2,4.5-5.25,4.5-8.708    C469.333,231.204,467.646,227.954,464.833,225.954z"/>
+      </g>
+    </g>
+
+    <g id="warningLights" transform="translate(271 ,503)">
+      <g id="handBrakeWarning" transform="scale(.12)"  fill="url(#warningOff)">
+    		<path d="M256.125,64c-105.865,0-192,86.125-192,192s86.135,192,192,192s192-86.125,192-192S361.99,64,256.125,64z      M256.125,405.333c-11.76,0-21.333-9.563-21.333-21.333c0-11.771,9.573-21.333,21.333-21.333s21.333,9.563,21.333,21.333     C277.458,395.771,267.885,405.333,256.125,405.333z M295.563,150.229l-18.167,170.896c0.063,9.208-7.417,20.208-21.271,20.208     s-21.333-11-21.333-21.333l-18.083-169.708c-1.125-11.167,2.531-22.292,10.031-30.583c15-16.583,43.771-16.583,58.771,0 C293,127.979,296.667,139.104,295.563,150.229z
+        M444.769,82.968c-4.081-4.444-11.196-4.452-15.464-0.187l-15.13,15.122c-4.048,4.046-4,10.448-0.149,14.682     c36.875,40.556,55.312,91.99,55.31,143.424c-0.002,51.427-18.439,102.853-55.31,143.404c-3.851,4.235-3.899,10.636,0.149,14.682     l15.13,15.122c4.268,4.266,11.383,4.257,15.465-0.187c44.823-48.805,67.233-110.925,67.23-173.044     C511.997,193.877,489.587,131.767,444.769,82.968z
+    		M42.664,255.995c0.001-51.429,18.438-102.857,55.31-143.409c3.851-4.235,3.899-10.636-0.149-14.682l-15.13-15.122     c-4.268-4.266-11.383-4.257-15.465,0.187C22.409,131.772-0.001,193.889,0,256.006c0.001,62.113,22.412,124.225,67.23,173.026     c4.081,4.444,11.197,4.453,15.465,0.187l15.13-15.123c4.048-4.046,4-10.447,0.149-14.682     C61.1,358.859,42.663,307.427,42.664,255.995z"/>
+      </g>
+
+      <g id="fuelWarning" transform="translate(105,0) scale(.12)"  fill="url(#warningOff)">
+    		<path d="M444.167,66.479l-64-53.333c-4.5-3.75-11.229-3.167-15.021,1.354c-3.771,4.521-3.167,11.25,1.354,15.021l27.328,22.776    c-11.668,22.169-6.458,49.402,13.547,65.391l19.292,15.444V416c0,4.792-5.875,10.667-10.667,10.667    c-4.792,0-10.667-5.875-10.667-10.667v-42.667c0-25.763-18.348-47.301-42.667-52.255V42.667C362.667,19.146,343.521,0,320,0    H106.667C83.146,0,64,19.146,64,42.667v426.667C64,492.854,83.146,512,106.667,512H320c23.521,0,42.667-19.146,42.667-42.667    V343.298C375.056,347.716,384,359.445,384,373.333V416c0,16.458,15.542,32,32,32c16.458,0,32-15.542,32-32V74.667    C448,71.5,446.604,68.5,444.167,66.479z M309.333,277.333h-192c-5.896,0-10.667-4.771-10.667-10.667    c0-5.896,4.771-10.667,10.667-10.667h192c5.896,0,10.667,4.771,10.667,10.667C320,272.563,315.229,277.333,309.333,277.333z     M320,202.667c0,5.896-4.771,10.667-10.667,10.667h-192c-5.896,0-10.667-4.771-10.667-10.667V53.333    c0-5.896,4.771-10.667,10.667-10.667h192c5.896,0,10.667,4.771,10.667,10.667V202.667z M426.667,105.79l-5.958-4.77    c-10.587-8.462-13.845-22.143-9.648-34.362l15.607,13.008V105.79z"/>
+      </g>
+
+      <g id="oilWarning" transform="translate(209,0) scale(.2)" fill="url(#warningOff)">
+      	<path d="M284.21,145.081c-1.382-3.878-5.017-6.504-9.13-6.6l-69.414-1.662l-45.85-17.092l6.378-17.102l0.38,0.142   c1.148,0.427,2.323,0.631,3.48,0.631c4.036,0,7.836-2.479,9.334-6.484c1.915-5.151-0.7-10.884-5.853-12.804l-38.479-14.34   c-5.143-1.92-10.88,0.7-12.815,5.852c-1.914,5.153,0.701,10.885,5.852,12.804l0.789,0.293l-6.368,17.1L76.549,88.691l-22.36-41.527   c-2.479-4.613-8.137-6.523-12.901-4.337L5.821,59.029c-2.712,1.24-4.725,3.622-5.492,6.499c-0.757,2.873-0.194,5.94,1.537,8.361   l44.682,62.288l-18.754,50.319c-0.924,2.475-0.826,5.212,0.273,7.612c1.089,2.402,3.101,4.27,5.57,5.192l132.159,49.261   c1.137,0.424,2.314,0.627,3.48,0.627c2.344,0,4.657-0.831,6.494-2.406l105.562-90.803   C284.451,153.291,285.599,148.961,284.21,145.081z M25.092,72.114l15.983-7.302l18.947,35.193l-5.095,13.688L25.092,72.114z
+      	M282.197,195.873c-0.575-1.268-1.848-2.084-3.248-2.091c-1.399,0-2.674,0.818-3.247,2.091   c-5.248,11.468-15.01,33.78-15.01,41.149c0,10.081,8.176,18.252,18.257,18.252c10.073,0,18.248-8.171,18.248-18.252   C297.197,229.654,287.447,207.345,282.197,195.873z"/>
+      </g>
+
+      <g id="batteryWarning" transform="translate(307,0) scale(.12)"  fill="url(#warningOff)">
+      		<path d="M469.333,106.667V85.333C469.333,73.573,459.771,64,448,64h-64c-11.771,0-21.333,9.573-21.333,21.333v21.333h-6.25    l-8.833-8.833c-7.938-7.948-18.938-12.5-30.167-12.5H194.583c-11.229,0-22.229,4.552-30.167,12.5l-8.833,8.833h-6.25V85.333    C149.333,73.573,139.771,64,128,64H64c-11.771,0-21.333,9.573-21.333,21.333v21.333C19.146,106.667,0,125.802,0,149.333v256    C0,428.865,19.146,448,42.667,448h426.667C492.854,448,512,428.865,512,405.333v-256C512,125.802,492.854,106.667,469.333,106.667    z M117.333,213.333H74.667c-5.896,0-10.667-4.771-10.667-10.667C64,196.771,68.771,192,74.667,192h42.667    c5.896,0,10.667,4.771,10.667,10.667C128,208.563,123.229,213.333,117.333,213.333z M437.333,213.333h-10.667V224    c0,5.896-4.771,10.667-10.667,10.667c-5.896,0-10.667-4.771-10.667-10.667v-10.667h-10.667c-5.896,0-10.667-4.771-10.667-10.667    c0-5.896,4.771-10.667,10.667-10.667h10.667v-10.667c0-5.896,4.771-10.667,10.667-10.667c5.896,0,10.667,4.771,10.667,10.667V192    h10.667c5.896,0,10.667,4.771,10.667,10.667C448,208.563,443.229,213.333,437.333,213.333z"/>
+      </g>
+
+      <g id="temperatureWarning" transform="translate(413,2) scale(.1)" fill="url(#warningOff)">
+
+  			<path d="M501.333,426.667c-29.563,0-45.031,16.125-56.333,27.896c-9.823,10.24-14.625,14.771-25.542,14.771     c-10.917,0-15.719-4.531-25.542-14.771c-11.302-11.771-26.771-27.896-56.333-27.896c-29.542,0-45,16.135-56.281,27.906     c-9.802,10.24-14.594,14.76-25.469,14.76c-10.865,0-15.646-4.521-25.448-14.75c-11.281-11.781-26.729-27.917-56.271-27.917     c-29.531,0-44.979,16.135-56.26,27.917c-9.802,10.229-14.583,14.75-25.448,14.75c-10.875,0-15.667-4.521-25.469-14.76     c-11.281-11.781-26.729-27.906-56.271-27.906C4.776,426.667,0,431.441,0,437.333v21.333c0,5.891,4.776,10.667,10.667,10.667     c10.865,0,15.656,4.521,25.458,14.75C47.406,495.865,62.865,512,92.406,512c29.531,0,44.979-16.135,56.26-27.917     c9.802-10.229,14.583-14.75,25.448-14.75c10.865,0,15.656,4.521,25.458,14.76C210.854,495.865,226.302,512,255.833,512     c29.542,0,45-16.135,56.281-27.906c9.802-10.24,14.594-14.76,25.469-14.76c10.917,0,15.719,4.531,25.542,14.771     C374.427,495.875,389.896,512,419.458,512s45.031-16.125,56.333-27.896c9.823-10.24,14.625-14.771,25.542-14.771     c5.891,0,10.667-4.776,10.667-10.667v-21.333C512,431.441,507.224,426.667,501.333,426.667z"/>
+  			<path d="M501.333,341.333c-29.563,0-45.031,16.125-56.333,27.896C435.177,379.469,430.375,384,419.458,384     c-10.917,0-15.719-4.531-25.542-14.771c-11.302-11.771-26.771-27.896-56.333-27.896c-2.809,0-5.378,0.27-7.94,0.544     c-4.009-29.155-24.737-52.764-52.31-61.063V256h96c5.896,0,10.667-4.771,10.667-10.667V224c0-5.896-4.771-10.667-10.667-10.667     h-96v-42.667h96c5.896,0,10.667-4.771,10.667-10.667v-21.333c0-5.896-4.771-10.667-10.667-10.667h-96V85.333h96     c5.896,0,10.667-4.771,10.667-10.667V53.333c0-5.896-4.771-10.667-10.667-10.667h-96v-32C277.333,4.771,272.563,0,266.667,0     h-21.333c-5.896,0-10.667,4.771-10.667,10.667v270.148c-27.579,8.299-48.31,31.919-52.313,61.083     c-2.65-0.294-5.324-0.565-8.24-0.565c-29.531,0-44.979,16.135-56.26,27.917C108.052,379.479,103.271,384,92.406,384     c-10.875,0-15.667-4.521-25.469-14.76c-11.281-11.781-26.729-27.906-56.271-27.906C4.776,341.333,0,346.108,0,352v21.333     C0,379.224,4.776,384,10.667,384c10.865,0,15.656,4.521,25.458,14.75c11.281,11.781,26.74,27.917,56.281,27.917     c29.531,0,44.979-16.135,56.26-27.917c9.802-10.229,14.583-14.75,25.448-14.75c8.382,0,13.197,2.772,19.439,8.703     c8.85,13.534,22.01,23.814,37.474,29.349c2.616,1.029,5.406,1.893,8.366,2.603c0.965,0.221,1.919,0.443,2.898,0.625     c4.194,0.806,8.607,1.387,13.542,1.387c0.035,0,0.064-0.007,0.099-0.007c0.023,0,0.044,0.007,0.068,0.007     c0.121,0,0.232-0.035,0.352-0.035c4.609-0.031,8.781-0.549,12.738-1.289c1.441-0.258,2.842-0.576,4.254-0.915     c1.961-0.505,3.814-1.099,5.618-1.749c16.563-5.404,30.611-16.211,39.836-30.622c5.945-5.525,10.674-8.056,18.785-8.056     c10.917,0,15.719,4.531,25.542,14.771c11.302,11.771,26.771,27.896,56.333,27.896s45.031-16.125,56.333-27.896     c9.823-10.24,14.625-14.771,25.542-14.771c5.891,0,10.667-4.776,10.667-10.667V352C512,346.108,507.224,341.333,501.333,341.333z"/>
+      </g>
+    </g>
+  </g>
+
+  Sorry, your browser does not support inline SVG.
+
+</svg>
